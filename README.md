@@ -18,7 +18,7 @@
 - ElementUI
 
 #### 项目工具:
-
+PyCharm Community Edition 2023.3.7
 
 
 #### 已实现功能
