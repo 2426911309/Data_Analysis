@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/jquery.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/ResizeSensor.js"></script>
+    <link rel="stylesheet" href="https://assets.pyecharts.org/assets/jquery-ui.css">
+    <style>
+        .chart-container {
+            display: none;
+            position: absolute;
+            width: 899.6px;
+            height: 500.6px;
+            top: 30.16874885559082px;
+            left: 7.987499713897705px;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <button onclick="showChart('2af3a5d737e049868c2f41a7ca05b4fb')">饼图</button>
+    <button onclick="showChart('612dd111326749d3bfff582b6838ea34')">柱状图</button>
+    <button onclick="showChart('d35d51ef602a447bb68496be9fcba24f')">折线图</button>
+    <button onclick="showChart('9b3013e39c8a4e7d83fa436c04ff3726')">散点图</button>
+    <div id="2af3a5d737e049868c2f41a7ca05b4fb" class="chart-container"></div>
+    <div id="612dd111326749d3bfff582b6838ea34" class="chart-container"></div>
+    <div id="d35d51ef602a447bb68496be9fcba24f" class="chart-container"></div>
+    <div id="9b3013e39c8a4e7d83fa436c04ff3726" class="chart-container"></div>
+</div>
+<script>
+    var chart_2af3a5d737e049868c2f41a7ca05b4fb = echarts.init(document.getElementById('2af3a5d737e049868c2f41a7ca05b4fb'), 'light', {renderer: 'canvas'});
+    var option_2af3a5d737e049868c2f41a7ca05b4fb = {
+        "animation": true,
+        "animationThreshold": 2000,
+        "animationDuration": 1000,
+        "animationEasing": "cubicOut",
+        "animationDelay": 0,
+        "animationDurationUpdate": 300,
+        "animationEasingUpdate": "cubicOut",
+        "animationDelayUpdate": 0,
+        "series": [
+            {
+                "type": "pie",
+                "clockwise": true,
+                "data": [
+                    {
+                        "name": "0-50W",
+                        "value": 1262
+                    },
+                    {
+                        "name": "51W-100W",
+                        "value": 4737
+                    },
+                    {
+                        "name": "101W-150W",
+                        "value": 2486
+                    },
+                    {
+                        "name": "151W-200W",
+                        "value": 732
+                    },
+                    {
+                        "name": "大于200W",
+                        "value": 336
+                    }
+                ],
+                "radius": [
+                    "0%",
+                    "75%"
+                ],
+                "center": [
+                    "50%",
+                    "50%"
+                ],
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8,
+                    "formatter": "{b}: {c}"
+                },
+                "rippleEffect": {
+                    "show": true,
+                    "brushType": "stroke",
+                    "scale": 2.5,
+                    "period": 4
+                }
+            }
+        ],
+        "legend": [
+            {
+                "data": [
+                    "0-50W",
+                    "51W-100W",
+                    "101W-150W",
+                    "151W-200W",
+                    "大于200W"
+                ],
+                "selected": {},
+                "show": true,
+                "padding": 5,
+                "itemGap": 10,
+                "itemWidth": 25,
+                "itemHeight": 14
+            }
+        ],
+        "tooltip": {
+            "show": true,
+            "trigger": "item",
+            "triggerOn": "mousemove|click",
+            "axisPointer": {
+                "type": "line"
+            },
+            "showContent": true,
+            "alwaysShowContent": false,
+            "showDelay": 0,
+            "hideDelay": 100,
+            "textStyle": {
+                "fontSize": 14
+            },
+            "borderWidth": 0,
+            "padding": 5
+        },
+        "title": [
+            {
+                "text": "宜宾房价区间统计",
+                "padding": 5,
+                "itemGap": 10
+            }
+        ]
+    };
+    chart_2af3a5d737e049868c2f41a7ca05b4fb.setOption(option_2af3a5d737e049868c2f41a7ca05b4fb);
+
+    var chart_612dd111326749d3bfff582b6838ea34 = echarts.init(document.getElementById('612dd111326749d3bfff582b6838ea34'), 'light', {renderer: 'canvas'});
+    var option_612dd111326749d3bfff582b6838ea34 = {
+        "animation": true,
+        "animationThreshold": 2000,
+        "animationDuration": 1000,
+        "animationEasing": "cubicOut",
+        "animationDelay": 0,
+        "animationDurationUpdate": 300,
+        "animationEasingUpdate": "cubicOut",
+        "animationDelayUpdate": 0,
+        "series": [
+            {
+                "type": "bar",
+                "name": "房屋朝向",
+                "legendHoverLink": true,
+                "data": [
+                    3453,
+                    3023,
+                    1273,
+                    459,
+                    393,
+                    184,
+                    151,
+                    122
+                ],
+                "showBackground": false,
+                "barMinHeight": 0,
+                "barCategoryGap": "20%",
+                "barGap": "30%",
+                "large": false,
+                "largeThreshold": 400,
+                "seriesLayoutBy": "column",
+                "datasetIndex": 0,
+                "clip": true,
+                "zlevel": 0,
+                "z": 2,
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                }
+            }
+        ],
+        "legend": [
+            {
+                "data": [
+                    "房屋朝向"
+                ],
+                "selected": {
+                    "房屋朝向": true
+                },
+                "show": true,
+                "padding": 5,
+                "itemGap": 10,
+                "itemWidth": 25,
+                "itemHeight": 14
+            }
+        ],
+        "tooltip": {
+            "show": true,
+            "trigger": "item",
+            "triggerOn": "mousemove|click",
+            "axisPointer": {
+                "type": "line"
+            },
+            "showContent": true,
+            "alwaysShowContent": false,
+            "showDelay": 0,
+            "hideDelay": 100,
+            "textStyle": {
+                "fontSize": 14
+            },
+            "borderWidth": 0,
+            "padding": 5
+        },
+        "xAxis": [
+            {
+                "show": true,
+                "scale": false,
+                "nameLocation": "end",
+                "nameGap": 15,
+                "gridIndex": 0,
+                "inverse": false,
+                "offset": 0,
+                "splitNumber": 5,
+                "minInterval": 0,
+                "splitLine": {
+                    "show": false,
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    }
+                },
+                "data": [
+                    "南",
+                    "东南",
+                    "西南",
+                    "东北",
+                    "东",
+                    "东南南",
+                    "北",
+                    "西"
+                ]
+            }
+        ],
+        "yAxis": [
+            {
+                "show": true,
+                "scale": false,
+                "nameLocation": "end",
+                "nameGap": 15,
+                "gridIndex": 0,
+                "inverse": false,
+                "offset": 0,
+                "splitNumber": 5,
+                "minInterval": 0,
+                "splitLine": {
+                    "show": false,
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    }
+                }
+            }
+        ],
+        "title": [
+            {
+                "text": "房屋朝向统计图",
+                "padding": 5,
+                "itemGap": 10
+            }
+        ]
+    };
+    chart_612dd111326749d3bfff582b6838ea34.setOption(option_612dd111326749d3bfff582b6838ea34);
+
+    var chart_d35d51ef602a447bb68496be9fcba24f = echarts.init(document.getElementById('d35d51ef602a447bb68496be9fcba24f'), 'light', {renderer: 'canvas'});
+    var option_d35d51ef602a447bb68496be9fcba24f = {
+        "animation": true,
+        "animationThreshold": 2000,
+        "animationDuration": 1000,
+        "animationEasing": "cubicOut",
+        "animationDelay": 0,
+        "animationDurationUpdate": 300,
+        "animationEasingUpdate": "cubicOut",
+        "animationDelayUpdate": 0,
+        "series": [
+            {
+                "type": "line",
+                "name": "小区房源数量统计",
+                "connectNulls": false,
+                "symbolSize": 4,
+                "showSymbol": true,
+                "smooth": false,
+                "clip": true,
+                "step": false,
+                "data": [
+                    [
+                        "城北",
+                        164
+                    ],
+                    [
+                        "美的林城时代南区",
+                        128
+                    ],
+                    [
+                        "僰发城",
+                        123
+                    ],
+                    [
+                        "祥大城",
+                        122
+                    ],
+                    [
+                        "中天会展城A区",
+                        111
+                    ]
+                ],
+                "hoverAnimation": true,
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                },
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                },
+                "areaStyle": {
+                    "opacity": 0
+                },
+                "zlevel": 0,
+                "z": 0
+            }
+        ],
+        "legend": [
+            {
+                "data": [
+                    "小区房源数量统计"
+                ],
+                "selected": {
+                    "小区房源数量统计": true
+                },
+                "show": true,
+                "padding": 5,
+                "itemGap": 10,
+                "itemWidth": 25,
+                "itemHeight": 14
+            }
+        ],
+        "tooltip": {
+            "show": true,
+            "trigger": "item",
+            "triggerOn": "mousemove|click",
+            "axisPointer": {
+                "type": "line"
+            },
+            "showContent": true,
+            "alwaysShowContent": false,
+            "showDelay": 0,
+            "hideDelay": 100,
+            "textStyle": {
+                "fontSize": 14
+            },
+            "borderWidth": 0,
+            "padding": 5
+        },
+        "xAxis": [
+            {
+                "show": true,
+                "scale": false,
+                "nameLocation": "end",
+                "nameGap": 15,
+                "gridIndex": 0,
+                "inverse": false,
+                "offset": 0,
+                "splitNumber": 5,
+                "minInterval": 0,
+                "splitLine": {
+                    "show": false,
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    }
+                },
+                "data": [
+                    "城北",
+                    "美的林城时代南区",
+                    "僰发城",
+                    "祥大城",
+                    "中天会展城A区"
+                ]
+            }
+        ],
+        "yAxis": [
+            {
+                "show": true,
+                "scale": false,
+                "nameLocation": "end",
+                "nameGap": 15,
+                "gridIndex": 0,
+                "inverse": false,
+                "offset": 0,
+                "splitNumber": 5,
+                "minInterval": 0,
+                "splitLine": {
+                    "show": false,
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    }
+                }
+            }
+        ],
+        "title": [
+            {
+                "text": "前五小区房源数折线图",
+                "padding": 5,
+                "itemGap": 10
+            }
+        ]
+    };
+    chart_d35d51ef602a447bb68496be9fcba24f.setOption(option_d35d51ef602a447bb68496be9fcba24f);
+
+    var chart_9b3013e39c8a4e7d83fa436c04ff3726 = echarts.init(document.getElementById('9b3013e39c8a4e7d83fa436c04ff3726'), 'light', {renderer: 'canvas'});
+    var option_9b3013e39c8a4e7d83fa436c04ff3726 = {
+        "animation": true,
+        "animationThreshold": 2000,
+        "animationDuration": 1000,
+        "animationEasing": "cubicOut",
+        "animationDelay": 0,
+        "animationDurationUpdate": 300,
+        "animationEasingUpdate": "cubicOut",
+        "animationDelayUpdate": 0,
+        "series": [
+            {
+                "type": "scatter",
+                "symbolSize": 20,
+                "data": [
+                    [
+                        23.0,
+                        39.8
+                    ],
+                    [
+                        32.0,
+                        31.8
+                    ],
+                    [
+                        33.36,
+                        18.0
+                    ],
+                    [
+                        39.31,
+                        43.0
+                    ],
+                    [
+                        41.09,
+                        46.0
+                    ],
+                    [
+                        41.11,
+                        21.0
+                    ],
+                    [
+                        41.12,
+                        39.0
+                    ],
+                    [
+                        45.0,
+                        31.8
+                    ],
+                    [
+                        45.22,
+                        26.0
+                    ],
+                    [
+                        50.0,
+                        30.0
+                    ],
+                    [
+                        50.0,
+                        50.0
+                    ],
+                    [
+                        50.34,
+                        79.8
+                    ],
+                    [
+                        51.86,
+                        35.0
+                    ],
+                    [
+                        52.21,
+                        66.0
+                    ],
+                    [
+                        52.56,
+                        66.0
+                    ],
+                    [
+                        53.43,
+                        41.6
+                    ],
+                    [
+                        54.89,
+                        35.0
+                    ],
+                    [
+                        56.48,
+                        40.0
+                    ],
+                    [
+                        57.0,
+                        94.0
+                    ],
+                    [
+                        58.25,
+                        36.0
+                    ],
+                    [
+                        58.79,
+                        60.0
+                    ],
+                    [
+                        60.0,
+                        45.0
+                    ],
+                    [
+                        60.0,
+                        75.0
+                    ],
+                    [
+                        60.2,
+                        35.0
+                    ],
+                    [
+                        61.17,
+                        68.0
+                    ],
+                    [
+                        62.0,
+                        60.0
+                    ],
+                    [
+                        63.75,
+                        57.0
+                    ],
+                    [
+                        64.0,
+                        45.0
+                    ],
+                    [
+                        65.0,
+                        65.0
+                    ],
+                    [
+                        65.0,
+                        49.6
+                    ],
+                    [
+                        66.0,
+                        46.0
+                    ],
+                    [
+                        66.6,
+                        65.0
+                    ],
+                    [
+                        68.0,
+                        61.2
+                    ],
+                    [
+                        69.59,
+                        56.0
+                    ],
+                    [
+                        71.0,
+                        47.0
+                    ],
+                    [
+                        72.0,
+                        57.0
+                    ],
+                    [
+                        72.0,
+                        69.9
+                    ],
+                    [
+                        72.0,
+                        57.0
+                    ],
+                    [
+                        76.0,
+                        60.0
+                    ],
+                    [
+                        78.0,
+                        70.0
+                    ],
+                    [
+                        78.15,
+                        78.0
+                    ],
+                    [
+                        80.0,
+                        82.0
+                    ],
+                    [
+                        80.0,
+                        72.0
+                    ],
+                    [
+                        80.0,
+                        72.0
+                    ],
+                    [
+                        80.5,
+                        42.0
+                    ],
+                    [
+                        81.0,
+                        90.0
+                    ],
+                    [
+                        83.0,
+                        78.0
+                    ],
+                    [
+                        84.0,
+                        65.0
+                    ],
+                    [
+                        85.0,
+                        62.8
+                    ],
+                    [
+                        85.0,
+                        75.0
+                    ],
+                    [
+                        85.03,
+                        95.0
+                    ],
+                    [
+                        85.31,
+                        85.0
+                    ],
+                    [
+                        85.48,
+                        100.0
+                    ],
+                    [
+                        85.7,
+                        73.0
+                    ],
+                    [
+                        86.16,
+                        70.0
+                    ],
+                    [
+                        86.31,
+                        73.0
+                    ],
+                    [
+                        87.0,
+                        92.0
+                    ],
+                    [
+                        89.0,
+                        110.0
+                    ],
+                    [
+                        89.0,
+                        86.0
+                    ],
+                    [
+                        89.9,
+                        90.0
+                    ],
+                    [
+                        90.0,
+                        98.0
+                    ],
+                    [
+                        90.23,
+                        60.0
+                    ],
+                    [
+                        91.46,
+                        75.0
+                    ],
+                    [
+                        92.18,
+                        80.0
+                    ],
+                    [
+                        92.7,
+                        103.0
+                    ],
+                    [
+                        93.63,
+                        82.0
+                    ],
+                    [
+                        95.0,
+                        120.0
+                    ],
+                    [
+                        95.0,
+                        80.0
+                    ],
+                    [
+                        95.95,
+                        95.0
+                    ],
+                    [
+                        99.0,
+                        98.0
+                    ],
+                    [
+                        103.68,
+                        75.0
+                    ],
+                    [
+                        106.8,
+                        90.0
+                    ],
+                    [
+                        108.0,
+                        79.0
+                    ],
+                    [
+                        110.0,
+                        110.0
+                    ],
+                    [
+                        111.25,
+                        102.0
+                    ],
+                    [
+                        113.0,
+                        100.0
+                    ],
+                    [
+                        115.85,
+                        165.0
+                    ],
+                    [
+                        116.0,
+                        116.0
+                    ],
+                    [
+                        116.0,
+                        105.0
+                    ],
+                    [
+                        117.28,
+                        112.0
+                    ],
+                    [
+                        119.68,
+                        110.0
+                    ],
+                    [
+                        120.0,
+                        96.0
+                    ],
+                    [
+                        121.06,
+                        103.0
+                    ],
+                    [
+                        121.33,
+                        82.0
+                    ],
+                    [
+                        121.59,
+                        82.0
+                    ],
+                    [
+                        124.5,
+                        142.0
+                    ],
+                    [
+                        131.49,
+                        85.0
+                    ],
+                    [
+                        131.5,
+                        145.0
+                    ],
+                    [
+                        134.0,
+                        155.0
+                    ],
+                    [
+                        136.0,
+                        155.0
+                    ],
+                    [
+                        146.0,
+                        160.0
+                    ],
+                    [
+                        150.0,
+                        112.0
+                    ],
+                    [
+                        164.0,
+                        180.0
+                    ],
+                    [
+                        167.95,
+                        136.0
+                    ],
+                    [
+                        168.0,
+                        202.0
+                    ],
+                    [
+                        168.0,
+                        135.0
+                    ],
+                    [
+                        180.34,
+                        125.0
+                    ],
+                    [
+                        210.5,
+                        140.0
+                    ],
+                    [
+                        242.37,
+                        180.0
+                    ],
+                    [
+                        288.0,
+                        398.0
+                    ]
+                ],
+                "label": {
+                    "show": false,
+                    "position": "top",
+                    "margin": 8
+                },
+                "rippleEffect": {
+                    "show": true,
+                    "brushType": "stroke",
+                    "scale": 2.5,
+                    "period": 4
+                }
+            }
+        ],
+        "legend": [
+            {
+                "data": [
+                    ""
+                ],
+                "selected": {
+                    "": true
+                },
+                "show": false,
+                "padding": 5,
+                "itemGap": 10,
+                "itemWidth": 25,
+                "itemHeight": 14
+            }
+        ],
+        "tooltip": {
+            "show": false,
+            "trigger": "item",
+            "triggerOn": "mousemove|click",
+            "axisPointer": {
+                "type": "line"
+            },
+            "showContent": true,
+            "alwaysShowContent": false,
+            "showDelay": 0,
+            "hideDelay": 100,
+            "textStyle": {
+                "fontSize": 14
+            },
+            "borderWidth": 0,
+            "padding": 5
+        },
+        "xAxis": [
+            {
+                "type": "value",
+                "show": true,
+                "scale": false,
+                "nameLocation": "end",
+                "nameGap": 15,
+                "gridIndex": 0,
+                "inverse": false,
+                "offset": 0,
+                "splitNumber": 5,
+                "minInterval": 0,
+                "splitLine": {
+                    "show": true,
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    }
+                },
+                "data": [
+                    23.0,
+                    32.0,
+                    33.36,
+                    39.31,
+                    41.09,
+                    41.11,
+                    41.12,
+                    45.0,
+                    45.22,
+                    50.0,
+                    50.0,
+                    50.34,
+                    51.86,
+                    52.21,
+                    52.56,
+                    53.43,
+                    54.89,
+                    56.48,
+                    57.0,
+                    58.25,
+                    58.79,
+                    60.0,
+                    60.0,
+                    60.2,
+                    61.17,
+                    62.0,
+                    63.75,
+                    64.0,
+                    65.0,
+                    65.0,
+                    66.0,
+                    66.6,
+                    68.0,
+                    69.59,
+                    71.0,
+                    72.0,
+                    72.0,
+                    72.0,
+                    76.0,
+                    78.0,
+                    78.15,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.5,
+                    81.0,
+                    83.0,
+                    84.0,
+                    85.0,
+                    85.0,
+                    85.03,
+                    85.31,
+                    85.48,
+                    85.7,
+                    86.16,
+                    86.31,
+                    87.0,
+                    89.0,
+                    89.0,
+                    89.9,
+                    90.0,
+                    90.23,
+                    91.46,
+                    92.18,
+                    92.7,
+                    93.63,
+                    95.0,
+                    95.0,
+                    95.95,
+                    99.0,
+                    103.68,
+                    106.8,
+                    108.0,
+                    110.0,
+                    111.25,
+                    113.0,
+                    115.85,
+                    116.0,
+                    116.0,
+                    117.28,
+                    119.68,
+                    120.0,
+                    121.06,
+                    121.33,
+                    121.59,
+                    124.5,
+                    131.49,
+                    131.5,
+                    134.0,
+                    136.0,
+                    146.0,
+                    150.0,
+                    164.0,
+                    167.95,
+                    168.0,
+                    168.0,
+                    180.34,
+                    210.5,
+                    242.37,
+                    288.0
+                ]
+            }
+        ],
+        "yAxis": [
+            {
+                "type": "value",
+                "show": true,
+                "scale": false,
+                "nameLocation": "end",
+                "nameGap": 15,
+                "gridIndex": 0,
+                "axisTick": {
+                    "show": true,
+                    "alignWithLabel": false,
+                    "inside": false
+                },
+                "inverse": false,
+                "offset": 0,
+                "splitNumber": 5,
+                "minInterval": 0,
+                "splitLine": {
+                    "show": true,
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    }
+                }
+            }
+        ],
+        "title": [
+            {
+                "text": "一百个面积-价格散点图",
+                "padding": 5,
+                "itemGap": 10
+            }
+        ]
+    };
+    chart_9b3013e39c8a4e7d83fa436c04ff3726.setOption(option_9b3013e39c8a4e7d83fa436c04ff3726);
+
+    function showChart(chartId) {
+        $('.chart-container').removeClass('active');
+        $('#' + chartId).addClass('active');
+    }
+</script>
+</body>
+</html>
